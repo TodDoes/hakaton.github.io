@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Песочница Voice → OpenRouter</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+  <div id="container">
+    <header class="header">
+      <div class="logo">
+        <i class="fas fa-code"></i>
+        <span>Voice Sandbox</span>
+      </div>
+      <div class="header-info">
+        <span class="tag">DeepSeek AI</span>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <div id="preview-pane">
+        <div class="pane-header">
+          <h3>Предпросмотр</h3>
+          <button id="run" class="btn-primary">
+            <i class="fas fa-play"></i> Запуск
+          </button>
+        </div>
+        <div class="preview-container">
+          <iframe id="preview"></iframe>
+        </div>
+      </div>
+
+      <div id="side-pane">
+        <div class="editor-block">
+          <div class="editor-header">
+            <i class="fab fa-html5"></i>
+            <span>HTML</span>
+          </div>
+          <textarea id="html-code" placeholder="<!-- Введите HTML код -->"></textarea>
+        </div>
+
+        <div class="editor-block">
+          <div class="editor-header">
+            <i class="fab fa-css3-alt"></i>
+            <span>CSS</span>
+          </div>
+          <textarea id="css-code" placeholder="/* Введите CSS код */"></textarea>
+        </div>
+
+        <div class="controls">
+          <button id="voice" class="btn-voice">
+            <i class="fas fa-microphone"></i> Начать запись
+          </button>
+          <button id="stop-voice" class="btn-stop">
+            <i class="fas fa-stop"></i> Остановить запись
+          </button>
+          <div id="status" class="status">Готов к работе</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+
+</html>
