@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_from_directory
+from flask import Flask, request, jsonify, send_from_directory, render_template
 import os
 import requests
 import json
@@ -15,7 +15,7 @@ first_request_done = False
 
 @app.route("/")
 def index():
-    return send_from_directory("static", "index.html")
+        return render_template("index.html")
 
 
 @app.route("/generate", methods=["POST"])
@@ -101,3 +101,4 @@ def generate():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
+
